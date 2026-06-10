@@ -1,0 +1,67 @@
+/* Estilos personalizados */
+body {
+    background-color: #f8f9fc;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.card {
+    transition: transform 0.2s ease-in-out;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card-header {
+    font-weight: 600;
+    border-bottom: none;
+}
+
+.table th, .table td {
+    vertical-align: middle;
+}
+
+.badge {
+    font-size: 0.85rem;
+    padding: 6px 12px;
+}
+
+.navbar-brand {
+    font-weight: 600;
+}
+
+.btn {
+    border-radius: 8px;
+    padding: 6px 16px;
+}
+
+footer {
+    font-size: 0.9rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .card-header h2, .card-header h3 {
+        font-size: 1.2rem;
+    }
+    
+    .table {
+        font-size: 0.85rem;
+    }
+    
+    .btn-sm {
+        padding: 4px 8px;
+        margin-bottom: 5px;
+    }
+}
+
+/* Animación suave */
+a, button {
+    transition: all 0.2s ease;
+}
+
+.alert-info {
+    border-left: 5px solid #0dcaf0;
+}
