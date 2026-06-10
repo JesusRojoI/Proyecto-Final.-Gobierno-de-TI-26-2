@@ -80,8 +80,9 @@ $entregables = [
                                     </td>
                                     <td>
                                         <?php if ($existe): ?>
-                                            <a href="<?php echo $ruta_pdf; ?>" class="btn btn-sm btn-outline-primary" target="_blank">
-                                                <i class="fas fa-eye me-1"></i> Ver PDF
+                                            <button onclick="verPDF('<?php echo $ruta_pdf; ?>', '<?php echo htmlspecialchars($item['nombre']); ?>')" class="btn btn-sm btn-pdf">
+                                                <i class="fas fa-eye me-1"></i> Visualizar
+                                            </button>
                                             </a>
                                             <a href="<?php echo $ruta_pdf; ?>" class="btn btn-sm btn-outline-secondary" download>
                                                 <i class="fas fa-download me-1"></i> Descargar
@@ -107,6 +108,38 @@ $entregables = [
             </div>
         </div>
     </div>
+                                    
+    <!-- MODAL VISOR PDF -->
+<div class="modal fade pdf-modal" id="pdfModal" tabindex="-1" aria-labelledby="pdfModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header bg-dark text-white">
+                <h5 class="modal-title" id="pdfModalLabel">
+                    <i class="fas fa-file-pdf me-2 text-danger"></i> Visualizando: <span id="pdfTitle"></span>
+                </h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body p-0">
+                <iframe id="pdfIframe" class="pdf-iframe" src=""></iframe>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                <a id="downloadLink" class="btn btn-pdf" download>📥 Descargar PDF</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+// Función para abrir PDF en el modal
+function verPDF(ruta, nombre) {
+    document.getElementById('pdfIframe').src = ruta;
+    document.getElementById('pdfTitle').innerText = nombre;
+    document.getElementById('downloadLink').href = ruta;
+    var myModal = new bootstrap.Modal(document.getElementById('pdfModal'));
+    myModal.show();
+}
+</script>
 </main>
 
 <?php include 'includes/footer.php'; ?>
