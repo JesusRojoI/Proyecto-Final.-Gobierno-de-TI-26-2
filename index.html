@@ -1,11 +1,235 @@
+<?php include 'includes/config.php'; ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Proyecto Final</title>
+    <title><?php echo SITE_TITLE; ?> - Información del Servicio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-    <h1>Prueba de funcionamiento</h1>
+
+<?php include 'includes/header.php'; ?>
+
+<main class="container my-5">
+    <!-- Introducción -->
+    <section class="mb-5">
+        <div class="row">
+            <div class="col-12">
+                <div class="card shadow-sm border-0">
+                    <div class="card-header bg-primary text-white">
+                        <h2 class="h4 mb-0"><i class="fas fa-info-circle me-2"></i>Introducción</h2>
+                    </div>
+                    <div class="card-body">
+                        <p class="lead">El presente proyecto establece un marco integral de Gobierno de TI basado en los estándares COBIT, ITIL e ISO 27000 para garantizar la alineación estratégica, la gestión de riesgos y la continuidad del servicio.</p>
+                        <p>La implementación de estas buenas prácticas permite a la organización maximizar el valor de sus inversiones tecnológicas, optimizar recursos y asegurar la disponibilidad de los servicios críticos. Este documento rector define las directrices para la gestión de servicios de TI, la identificación de activos, el análisis de impacto al negocio y los planes de continuidad necesarios para salvaguardar las operaciones.</p>
+                        <p><strong>Alcance:</strong> El servicio de TI cubre los procesos misionales de la empresa, asegurando niveles de servicio acordes a las necesidades del negocio y cumpliendo con los requisitos normativos aplicables.</p>
+                        <a href="evidencias.php" class="btn btn-outline-primary mt-3"><i class="fas fa-file-pdf me-2"></i>Ver todas las evidencias</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Objetivo y Descripción -->
+    <section class="mb-5">
+        <div class="row">
+            <div class="col-md-6 mb-4">
+                <div class="card h-100 shadow-sm border-0">
+                    <div class="card-header bg-success text-white">
+                        <h3 class="h5 mb-0"><i class="fas fa-bullseye me-2"></i>Objetivo del Servicio de IT</h3>
+                    </div>
+                    <div class="card-body">
+                        <p>Garantizar la disponibilidad, confidencialidad e integridad de los servicios críticos de TI con un <strong>99.9% de disponibilidad</strong>, tiempos de respuesta menores a 2 horas para incidentes críticos y una tasa de recuperación ante desastres (RTO/RPO) alineada a las necesidades del negocio.</p>
+                        <ul>
+                            <li>Reducir el tiempo de inactividad no planificado en un 50%</li>
+                            <li>Disminuir riesgos operativos mediante matriz CID</li>
+                            <li>Establecer plan de continuidad validado anualmente</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 mb-4">
+                <div class="card h-100 shadow-sm border-0">
+                    <div class="card-header bg-info text-white">
+                        <h3 class="h5 mb-0"><i class="fas fa-server me-2"></i>Descripción del Servicio</h3>
+                    </div>
+                    <div class="card-body">
+                        <p>Servicio de infraestructura crítica y soporte operativo para los procesos misionales de la organización, incluyendo:</p>
+                        <ul>
+                            <li><strong>Infraestructura:</strong> Servidores, red, almacenamiento y respaldos.</li>
+                            <li><strong>Soporte:</strong> Mesa de servicio, gestión de incidentes y problemas.</li>
+                            <li><strong>Seguridad:</strong> Gestión de accesos, copias de seguridad y BIA.</li>
+                            <li><strong>Continuidad:</strong> Plan de recuperación ante desastres.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Misión, Visión y Valores -->
+    <section class="mb-5">
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 text-center shadow-sm">
+                    <div class="card-body">
+                        <i class="fas fa-flag-checkered fa-3x text-primary mb-3"></i>
+                        <h3 class="h5">Misión</h3>
+                        <p>Proveer servicios de TI confiables, seguros y alineados a los objetivos del negocio, impulsando la transformación digital con calidad y mejora continua.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 text-center shadow-sm">
+                    <div class="card-body">
+                        <i class="fas fa-eye fa-3x text-primary mb-3"></i>
+                        <h3 class="h5">Visión</h3>
+                        <p>Ser reconocidos como centro de excelencia en Gobierno de TI, con certificación en estándares internacionales y operación cero incidentes críticos no planificados.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 text-center shadow-sm">
+                    <div class="card-body">
+                        <i class="fas fa-heart fa-3x text-primary mb-3"></i>
+                        <h3 class="h5">Valores</h3>
+                        <ul class="list-unstyled">
+                            <li>🔒 Confidencialidad</li>
+                            <li>⚖️ Integridad</li>
+                            <li>📊 Transparencia</li>
+                            <li>🔄 Mejora Continua</li>
+                            <li>🤝 Colaboración</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Metas Corporativas (COBIT + BSC) -->
+    <section class="mb-5">
+        <div class="card shadow-sm border-0">
+            <div class="card-header bg-dark text-white">
+                <h3 class="h5 mb-0"><i class="fas fa-chart-line me-2"></i>Metas Corporativas (COBIT + Balanced Scorecard)</h3>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="border rounded p-3 text-center h-100">
+                            <i class="fas fa-chart-pie fa-2x text-primary"></i>
+                            <h4 class="h6 mt-2">Financiera</h4>
+                            <p class="small">Optimizar el ROI de inversiones tecnológicas reduciendo costos operativos en un 15% anual.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="border rounded p-3 text-center h-100">
+                            <i class="fas fa-users fa-2x text-primary"></i>
+                            <h4 class="h6 mt-2">Clientes</h4>
+                            <p class="small">Aumentar la satisfacción del usuario interno a 4.5/5 en encuestas de servicio.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="border rounded p-3 text-center h-100">
+                            <i class="fas fa-cogs fa-2x text-primary"></i>
+                            <h4 class="h6 mt-2">Procesos Internos</h4>
+                            <p class="small">Reducir el tiempo de resolución de incidentes críticos a menos de 2 horas.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="border rounded p-3 text-center h-100">
+                            <i class="fas fa-graduation-cap fa-2x text-primary"></i>
+                            <h4 class="h6 mt-2">Crecimiento</h4>
+                            <p class="small">Capacitar al 100% del personal de TI en COBIT e ITIL durante el año fiscal.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Metas IT (COBIT + BSC) -->
+    <section class="mb-5">
+        <div class="card shadow-sm border-0">
+            <div class="card-header bg-secondary text-white">
+                <h3 class="h5 mb-0"><i class="fas fa-microchip me-2"></i>Metas IT (COBIT + Balanced Scorecard)</h3>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="border rounded p-3 text-center h-100">
+                            <i class="fas fa-dollar-sign fa-2x text-success"></i>
+                            <h4 class="h6 mt-2">Financiera TI</h4>
+                            <p class="small">Reducir costos de licenciamiento en un 10% mediante optimización de activos.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="border rounded p-3 text-center h-100">
+                            <i class="fas fa-headset fa-2x text-success"></i>
+                            <h4 class="h6 mt-2">Clientes TI</h4>
+                            <p class="small">Cumplir el 99.5% de los SLA de disponibilidad de servicios críticos.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="border rounded p-3 text-center h-100">
+                            <i class="fas fa-shield-alt fa-2x text-success"></i>
+                            <h4 class="h6 mt-2">Procesos TI</h4>
+                            <p class="small">Implementar matriz CID y reducir riesgos residuales a nivel bajo.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="border rounded p-3 text-center h-100">
+                            <i class="fas fa-chalkboard-teacher fa-2x text-success"></i>
+                            <h4 class="h6 mt-2">Crecimiento TI</h4>
+                            <p class="small">Documentar y socializar el Plan de Continuidad (BIA + DRP) al 100% del personal clave.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cascada de Metas y Mapa Estratégico (vista previa) -->
+    <section class="mb-5">
+        <div class="row">
+            <div class="col-md-6 mb-4">
+                <div class="card shadow-sm h-100">
+                    <div class="card-header bg-warning text-dark">
+                        <h3 class="h5 mb-0"><i class="fas fa-project-diagram me-2"></i>Cascada de Metas (Mapeo COBIT)</h3>
+                    </div>
+                    <div class="card-body">
+                        <p>Relaciones primarias y secundarias entre metas corporativas y metas de TI según COBIT 2019:</p>
+                        <ul>
+                            <li><strong>Financiera ↔</strong> Optimización de costos TI</li>
+                            <li><strong>Clientes ↔</strong> Cumplimiento de SLA</li>
+                            <li><strong>Procesos Internos ↔</strong> Madurez de continuidad (BIA)</li>
+                            <li><strong>Crecimiento ↔</strong> Capacitación en estándares</li>
+                        </ul>
+                        <a href="pdfs/13_cascada_metas.pdf" class="btn btn-sm btn-outline-warning" target="_blank"><i class="fas fa-file-pdf"></i> Ver documento completo</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 mb-4">
+                <div class="card shadow-sm h-100">
+                    <div class="card-header bg-info text-white">
+                        <h3 class="h5 mb-0"><i class="fas fa-map me-2"></i>Mapa Estratégico (Balanced Scorecard)</h3>
+                    </div>
+                    <div class="card-body">
+                        <p>Relación entre <strong>Meta Corporativa:</strong> "Optimizar ROI de inversiones TI" y <strong>Meta IT:</strong> "Reducir costos de licenciamiento 10%".</p>
+                        <p>Estrategia: Centralización de activos, renegociación con proveedores y adopción de open source.</p>
+                        <a href="pdfs/14_mapa_estrategico.pdf" class="btn btn-sm btn-outline-info" target="_blank"><i class="fas fa-file-pdf"></i> Ver mapa completo</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<?php include 'includes/footer.php'; ?>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/main.js"></script>
 </body>
 </html>
