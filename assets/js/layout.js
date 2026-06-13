@@ -43,19 +43,19 @@ function renderLayout(basePath = '') {
                             <i class="fas fa-chart-line nav-icon"></i>
                             <span>Metas Corporativas (COBIT + BSC)</span>
                         </a></li>
-                        <li><a href="${path}metas-it.html" class="${currentPath === 'metas-it.html' ? 'active' : ''}">
+                        <li><a href="${path}pages/metas-it.html" class="${currentPath === 'metas-it.html' ? 'active' : ''}">
                             <i class="fas fa-microchip nav-icon"></i>
                             <span>Metas IT (COBIT + BSC)</span>
                         </a></li>
-                        <li><a href="${path}cascada-metas.html" class="${currentPath === 'cascada-metas.html' ? 'active' : ''}">
+                        <li><a href="${path}pages/cascada-metas.html" class="${currentPath === 'cascada-metas.html' ? 'active' : ''}">
                             <i class="fas fa-sitemap nav-icon"></i>
                             <span>Cascada de Metas (Mapeo)</span>
                         </a></li>
-                        <li><a href="${path}mapa-estrategico.html" class="${currentPath === 'mapa-estrategico.html' ? 'active' : ''}">
+                        <li><a href="${path}pages/mapa-estrategico.html" class="${currentPath === 'mapa-estrategico.html' ? 'active' : ''}">
                             <i class="fas fa-map nav-icon"></i>
                             <span>Mapa Estratégico (BSC)</span>
                         </a></li>
-                        <li><a href="${path}caso-negocio.html" class="${currentPath === 'caso-negocio.html' ? 'active' : ''}">
+                        <li><a href="${path}pages/caso-negocio.html" class="${currentPath === 'caso-negocio.html' ? 'active' : ''}">
                             <i class="fas fa-briefcase nav-icon"></i>
                             <span>Caso de Negocio</span>
                         </a></li>
@@ -63,15 +63,15 @@ function renderLayout(basePath = '') {
                             <i class="fas fa-file-alt nav-icon"></i>
                             <span>Cédula de Servicio (ITIL)</span>
                         </a></li>
-                        <li><a href="${path}inventario-activos.html" class="${currentPath === 'inventario-activos.html' ? 'active' : ''}">
+                        <li><a href="${path}pages/inventario-activos.html" class="${currentPath === 'inventario-activos.html' ? 'active' : ''}">
                             <i class="fas fa-database nav-icon"></i>
                             <span>Inventario de Activos</span>
                         </a></li>
-                        <li><a href="${path}matriz-riesgos.html" class="${currentPath === 'matriz-riesgos.html' ? 'active' : ''}">
+                        <li><a href="${path}pages/matriz-riesgos.html" class="${currentPath === 'matriz-riesgos.html' ? 'active' : ''}">
                             <i class="fas fa-exclamation-triangle nav-icon"></i>
                             <span>Matriz de Riesgos (ISO 27000)</span>
                         </a></li>
-                        <li><a href="${path}bia-tactico.html" class="${currentPath === 'bia-tactico.html' ? 'active' : ''}">
+                        <li><a href="${path}pages/bia-tactico.html" class="${currentPath === 'bia-tactico.html' ? 'active' : ''}">
                             <i class="fas fa-chart-bar nav-icon"></i>
                             <span>BIA Táctico (3 procesos)</span>
                         </a></li>
@@ -79,7 +79,7 @@ function renderLayout(basePath = '') {
                             <i class="fas fa-chart-pie nav-icon"></i>
                             <span>BIA Operacional</span>
                         </a></li>
-                        <li><a href="${path}plan-continuidad.html" class="${currentPath === 'plan-continuidad.html' ? 'active' : ''}">
+                        <li><a href="${path}pages/plan-continuidad.html" class="${currentPath === 'plan-continuidad.html' ? 'active' : ''}">
                             <i class="fas fa-redo-alt nav-icon"></i>
                             <span>Plan de Continuidad</span>
                         </a></li>
