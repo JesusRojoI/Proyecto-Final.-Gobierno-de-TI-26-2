@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Planeación y Alcance (RoE) — IT Governance | IPN ESCOM</title>
+  <link rel="stylesheet" href="../assets/css/style.css" />
+</head>
+<body>
+
+  <div id="site-header-placeholder"></div>
+
+  <div class="layout">
+    <div id="sidebar-placeholder"></div>
+
+    <main class="main-content">
+
+      <!-- Breadcrumb -->
+      <nav class="breadcrumb">
+        <a href="../index.html">Inicio</a>
+        <span>›</span>
+        <span>Actividades</span>
+        <span>›</span>
+        <span>Planeación y Alcance (RoE)</span>
+      </nav>
+
+      <!-- Cabecera de actividad -->
+      <div class="activity-header">
+        <span class="phase-tag">Fase 1 · 04 Feb – 14 Feb 2026</span>
+        <h2>📋 Planeación y Alcance (RoE)</h2>
+        <div class="meta">
+          <span>⏱ Duración: 2 semanas</span>
+          <span>👤 Responsable: Líder de Proyecto</span>
+        </div>
+      </div>
+
+      <!-- Descripción -->
+      <div class="activity-desc">
+        <h3>Descripción de la Actividad</h3>
+        <p>La fase de Planeación y Alcance marca el punto de partida formal del servicio de seguridad ofensiva. En esta etapa se realiza el <strong>kick-off</strong> del proyecto, estableciendo las bases sobre las cuales se ejecutarán todas las evaluaciones posteriores. El entregable central de esta fase son las <strong>Reglas de Compromiso (RoE, Rules of Engagement)</strong>, un documento que delimita con precisión qué sistemas pueden ser evaluados, qué técnicas están autorizadas, en qué horarios puede operar el equipo y cuáles son los protocolos de emergencia en caso de incidentes durante las pruebas.</p>
+        <p>Desde la perspectiva del Gobierno de TI, esta fase es fundamental porque establece el marco de <strong>responsabilidad legal y técnica</strong> que protege tanto al equipo evaluador como a la organización cliente. Sin un alcance bien definido, cualquier acción podría interpretarse como un acceso no autorizado, con consecuencias legales graves. Las RoE actúan como el contrato operativo que legitima cada acción ofensiva realizada durante el proyecto.</p>
+        <p>El Líder de Proyecto coordina reuniones con los stakeholders clave para levantar el inventario de activos críticos, identificar las restricciones técnicas y normativas aplicables, y alinear las expectativas de la alta dirección con los objetivos técnicos del servicio. Este alineamiento es indispensable para garantizar que los hallazgos tengan relevancia estratégica para el negocio.</p>
+      </div>
+
+      <!-- Visor PDF -->
+      <div class="pdf-viewer-wrap">
+        <h3>📎 Documento de la Actividad</h3>
+        <div class="pdf-container">
+          <iframe
+            id="pdf-frame"
+            src="../pdfs/planeacion.pdf"
+            title="Documento PDF: Planeación y Alcance (RoE)">
+          </iframe>
+          <div class="pdf-placeholder" id="pdf-placeholder" style="display:none;">
+            <span class="pdf-icon">📂</span>
+            <p>El documento aún no está disponible.<br>
+               Sube el archivo <code>planeacion.pdf</code> a la carpeta <code>pdfs/</code> del proyecto.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Descarga -->
+      <a class="btn-download" href="../pdfs/planeacion.pdf" download>
+        ⬇️ Descargar planeacion.pdf
+      </a>
+
+    </main>
+  </div>
+
+  <script src="../assets/js/layout.js"></script>
+  <script>
+    renderLayout('../');
+
+    // Detecta si el PDF está disponible
+    (function() {
+      var frame = document.getElementById('pdf-frame');
+      var ph    = document.getElementById('pdf-placeholder');
+      if (!frame) return;
+      frame.addEventListener('load', function() {
+        // Si el iframe carga un error 404 en GitHub Pages, mostrará contenido vacío
+        try {
+          if (frame.contentDocument && frame.contentDocument.title === '404') {
+            frame.style.display = 'none';
+            if (ph) ph.style.display = 'flex';
+          }
+        } catch(e) {
+          // cross-origin: el PDF sí cargó correctamente
+        }
+      });
+    })();
+  </script>
+</body>
+</html>

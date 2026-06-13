@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Reporte y Cierre — IT Governance | IPN ESCOM</title>
+  <link rel="stylesheet" href="../assets/css/style.css" />
+</head>
+<body>
+
+  <div id="site-header-placeholder"></div>
+
+  <div class="layout">
+    <div id="sidebar-placeholder"></div>
+
+    <main class="main-content">
+
+      <!-- Breadcrumb -->
+      <nav class="breadcrumb">
+        <a href="../index.html">Inicio</a>
+        <span>›</span>
+        <span>Actividades</span>
+        <span>›</span>
+        <span>Reporte y Cierre</span>
+      </nav>
+
+      <!-- Cabecera de actividad -->
+      <div class="activity-header">
+        <span class="phase-tag">Fase 7 · 16 May – 12 Jun 2026</span>
+        <h2>📄 Reporte y Cierre</h2>
+        <div class="meta">
+          <span>⏱ Duración: 4 semanas</span>
+          <span>👤 Responsable: Líder de Proyecto</span>
+        </div>
+      </div>
+
+      <!-- Descripción -->
+      <div class="activity-desc">
+        <h3>Descripción de la Actividad</h3>
+        <p>La fase de Reporte y Cierre es la entrega formal del valor generado por todo el proyecto. Se producen dos documentos diferenciados: el <strong>Informe Técnico</strong>, dirigido al equipo de TI y seguridad, que detalla cada hallazgo con su descripción técnica, evidencia (capturas de pantalla, PoC), referencia CVE cuando aplica, y los pasos exactos de remediación; y el <strong>Informe Ejecutivo</strong>, dirigido a la alta dirección, que presenta el riesgo en términos de negocio — impacto financiero potencial, exposición reputacional y posición de la organización frente a sus obligaciones normativas — sin tecnicismos.</p>
+        <p>La entrega culmina con una <strong>presentación formal</strong> ante los stakeholders clave de la organización. En esta sesión, el Líder de Proyecto y el equipo técnico presentan los hallazgos más críticos, responden preguntas de la dirección y facilitan la comprensión del riesgo. Esta instancia de comunicación directa es fundamental para garantizar que los recursos necesarios para la remediación sean aprobados y priorizados.</p>
+        <p>Como parte del cierre formal del proyecto, se verifica que todos los accesos, herramientas y artefactos utilizados durante el engagement sean correctamente eliminados de los sistemas de la organización, y que toda la información sensible recopilada durante las pruebas sea tratada conforme al acuerdo de confidencialidad firmado en la Fase 1. El proyecto concluye con la firma del <strong>acta de cierre</strong> por ambas partes.</p>
+      </div>
+
+      <!-- Visor PDF -->
+      <div class="pdf-viewer-wrap">
+        <h3>📎 Documento de la Actividad</h3>
+        <div class="pdf-container">
+          <iframe
+            id="pdf-frame"
+            src="../pdfs/reporte.pdf"
+            title="Documento PDF: Reporte y Cierre">
+          </iframe>
+          <div class="pdf-placeholder" id="pdf-placeholder" style="display:none;">
+            <span class="pdf-icon">📂</span>
+            <p>El documento aún no está disponible.<br>
+               Sube el archivo <code>reporte.pdf</code> a la carpeta <code>pdfs/</code> del proyecto.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Descarga -->
+      <a class="btn-download" href="../pdfs/reporte.pdf" download>
+        ⬇️ Descargar reporte.pdf
+      </a>
+
+    </main>
+  </div>
+
+  <script src="../assets/js/layout.js"></script>
+  <script>
+    renderLayout('../');
+
+    // Detecta si el PDF está disponible
+    (function() {
+      var frame = document.getElementById('pdf-frame');
+      var ph    = document.getElementById('pdf-placeholder');
+      if (!frame) return;
+      frame.addEventListener('load', function() {
+        // Si el iframe carga un error 404 en GitHub Pages, mostrará contenido vacío
+        try {
+          if (frame.contentDocument && frame.contentDocument.title === '404') {
+            frame.style.display = 'none';
+            if (ph) ph.style.display = 'flex';
+          }
+        } catch(e) {
+          // cross-origin: el PDF sí cargó correctamente
+        }
+      });
+    })();
+  </script>
+</body>
+</html>

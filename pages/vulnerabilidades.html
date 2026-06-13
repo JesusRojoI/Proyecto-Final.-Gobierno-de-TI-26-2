@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Evaluación de Vulnerabilidades — IT Governance | IPN ESCOM</title>
+  <link rel="stylesheet" href="../assets/css/style.css" />
+</head>
+<body>
+
+  <div id="site-header-placeholder"></div>
+
+  <div class="layout">
+    <div id="sidebar-placeholder"></div>
+
+    <main class="main-content">
+
+      <!-- Breadcrumb -->
+      <nav class="breadcrumb">
+        <a href="../index.html">Inicio</a>
+        <span>›</span>
+        <span>Actividades</span>
+        <span>›</span>
+        <span>Evaluación de Vulnerabilidades</span>
+      </nav>
+
+      <!-- Cabecera de actividad -->
+      <div class="activity-header">
+        <span class="phase-tag">Fase 3 · 01 Mar – 15 Mar 2026</span>
+        <h2>🛡️ Evaluación de Vulnerabilidades</h2>
+        <div class="meta">
+          <span>⏱ Duración: 2 semanas</span>
+          <span>👤 Responsable: Analista / Pentester</span>
+        </div>
+      </div>
+
+      <!-- Descripción -->
+      <div class="activity-desc">
+        <h3>Descripción de la Actividad</h3>
+        <p>La Evaluación de Vulnerabilidades es el primer punto de contacto técnico y directo con los sistemas de la organización. En esta fase se ejecutan <strong>escaneos automatizados</strong> sobre la infraestructura definida en el alcance (servidores, redes, bases de datos, servicios expuestos) para identificar vulnerabilidades conocidas: versiones de software desactualizadas, puertos abiertos sin justificación, configuraciones incorrectas y credenciales por defecto.</p>
+        <p>Sin embargo, el diferenciador de esta fase no es el escaneo automatizado en sí — que cualquier herramienta como Nessus o OpenVAS puede realizar — sino la <strong>validación manual</strong> de cada hallazgo. Un escáner automatizado genera muchos falsos positivos; el analista verifica cuáles son reales, cuáles son explotables en el contexto específico de la organización y cuál es su impacto real sobre el negocio. Los resultados se priorizan usando el estándar <strong>CVSS (Common Vulnerability Scoring System)</strong>, clasificando cada vulnerabilidad por severidad: Crítica, Alta, Media y Baja.</p>
+        <p>El producto de esta fase es un informe de vulnerabilidades priorizado que se convierte en el mapa de trabajo para la fase de pentesting. También sirve como insumo directo para el área de TI de la organización, que puede iniciar remedaciones de baja complejidad (parches, cambios de configuración) de forma inmediata, sin esperar la conclusión del proyecto completo.</p>
+      </div>
+
+      <!-- Visor PDF -->
+      <div class="pdf-viewer-wrap">
+        <h3>📎 Documento de la Actividad</h3>
+        <div class="pdf-container">
+          <iframe
+            id="pdf-frame"
+            src="../pdfs/vulnerabilidades.pdf"
+            title="Documento PDF: Evaluación de Vulnerabilidades">
+          </iframe>
+          <div class="pdf-placeholder" id="pdf-placeholder" style="display:none;">
+            <span class="pdf-icon">📂</span>
+            <p>El documento aún no está disponible.<br>
+               Sube el archivo <code>vulnerabilidades.pdf</code> a la carpeta <code>pdfs/</code> del proyecto.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Descarga -->
+      <a class="btn-download" href="../pdfs/vulnerabilidades.pdf" download>
+        ⬇️ Descargar vulnerabilidades.pdf
+      </a>
+
+    </main>
+  </div>
+
+  <script src="../assets/js/layout.js"></script>
+  <script>
+    renderLayout('../');
+
+    // Detecta si el PDF está disponible
+    (function() {
+      var frame = document.getElementById('pdf-frame');
+      var ph    = document.getElementById('pdf-placeholder');
+      if (!frame) return;
+      frame.addEventListener('load', function() {
+        // Si el iframe carga un error 404 en GitHub Pages, mostrará contenido vacío
+        try {
+          if (frame.contentDocument && frame.contentDocument.title === '404') {
+            frame.style.display = 'none';
+            if (ph) ph.style.display = 'flex';
+          }
+        } catch(e) {
+          // cross-origin: el PDF sí cargó correctamente
+        }
+      });
+    })();
+  </script>
+</body>
+</html>

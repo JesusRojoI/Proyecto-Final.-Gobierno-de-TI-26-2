@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Análisis de Resultados — IT Governance | IPN ESCOM</title>
+  <link rel="stylesheet" href="../assets/css/style.css" />
+</head>
+<body>
+
+  <div id="site-header-placeholder"></div>
+
+  <div class="layout">
+    <div id="sidebar-placeholder"></div>
+
+    <main class="main-content">
+
+      <!-- Breadcrumb -->
+      <nav class="breadcrumb">
+        <a href="../index.html">Inicio</a>
+        <span>›</span>
+        <span>Actividades</span>
+        <span>›</span>
+        <span>Análisis de Resultados</span>
+      </nav>
+
+      <!-- Cabecera de actividad -->
+      <div class="activity-header">
+        <span class="phase-tag">Fase 6 · 16 Abr – 15 May 2026</span>
+        <h2>📊 Análisis de Resultados</h2>
+        <div class="meta">
+          <span>⏱ Duración: 4 semanas</span>
+          <span>👤 Responsable: Todo el equipo</span>
+        </div>
+      </div>
+
+      <!-- Descripción -->
+      <div class="activity-desc">
+        <h3>Descripción de la Actividad</h3>
+        <p>Una vez concluidas todas las fases operativas, el equipo completo se dedica a la <strong>consolidación y análisis integral de hallazgos</strong>. Este proceso va mucho más allá de agregar datos: se trata de construir una narrativa coherente que conecte los hallazgos técnicos con el impacto real sobre el negocio. Un puerto abierto o una vulnerabilidad de inyección SQL tiene diferente peso según si otorga acceso a la base de datos de clientes, a los sistemas de facturación o a un servidor de pruebas sin datos críticos.</p>
+        <p>En esta fase se realiza el <strong>análisis de cadenas de ataque</strong>: cómo un atacante podría encadenar múltiples hallazgos de severidad individual media para lograr un compromiso crítico de la organización. Este enfoque sistémico es lo que diferencia un informe de seguridad de calidad de una simple lista de vulnerabilidades. También se comparan los resultados contra marcos normativos (ISO 27001, PCI-DSS) para identificar los controles específicos que están fallando.</p>
+        <p>El producto de esta fase es el borrador del informe maestro del proyecto, que incluye un resumen ejecutivo orientado a la dirección, el informe técnico detallado para el área de TI, la clasificación de hallazgos por severidad e impacto, y el plan de remediación priorizado con recomendaciones concretas y plazos sugeridos.</p>
+      </div>
+
+      <!-- Visor PDF -->
+      <div class="pdf-viewer-wrap">
+        <h3>📎 Documento de la Actividad</h3>
+        <div class="pdf-container">
+          <iframe
+            id="pdf-frame"
+            src="../pdfs/analisis.pdf"
+            title="Documento PDF: Análisis de Resultados">
+          </iframe>
+          <div class="pdf-placeholder" id="pdf-placeholder" style="display:none;">
+            <span class="pdf-icon">📂</span>
+            <p>El documento aún no está disponible.<br>
+               Sube el archivo <code>analisis.pdf</code> a la carpeta <code>pdfs/</code> del proyecto.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Descarga -->
+      <a class="btn-download" href="../pdfs/analisis.pdf" download>
+        ⬇️ Descargar analisis.pdf
+      </a>
+
+    </main>
+  </div>
+
+  <script src="../assets/js/layout.js"></script>
+  <script>
+    renderLayout('../');
+
+    // Detecta si el PDF está disponible
+    (function() {
+      var frame = document.getElementById('pdf-frame');
+      var ph    = document.getElementById('pdf-placeholder');
+      if (!frame) return;
+      frame.addEventListener('load', function() {
+        // Si el iframe carga un error 404 en GitHub Pages, mostrará contenido vacío
+        try {
+          if (frame.contentDocument && frame.contentDocument.title === '404') {
+            frame.style.display = 'none';
+            if (ph) ph.style.display = 'flex';
+          }
+        } catch(e) {
+          // cross-origin: el PDF sí cargó correctamente
+        }
+      });
+    })();
+  </script>
+</body>
+</html>
