@@ -1,19 +1,15 @@
 # Servicio de Seguridad Ofensiva — IT Governance IPN ESCOM
 
-Proyecto académico desarrollado por el Grupo 7CV4 para la materia de IT Governance.
+Proyecto académico desarrollado para la materia de IT Governance, grupo 7CV4.
 
-## Instrucciones para GitHub Pages
+## Integrantes:
 
-1. Sube este repositorio a GitHub.
-2. Ve a **Settings → Pages** y selecciona la rama `main` como fuente.
-3. El sitio se publicará en `https://tuusuario.github.io/nombre-repo/`.
+1. Rojo Ibarra Jesús
 
-## Agregar los PDFs
 
-Coloca los archivos en la carpeta `pdfs/` con los nombres indicados en `pdfs/README.md`.
+## Propósito:
 
-## Logos del IPN/ESCOM
+Integrar las actividades realizadas a lo largo de la unidad de aprendizaje de IT | Governance en un proyecto web.
+Con ayuda de las mismas, se implementaron los principales marcos de trabajo y estándares de gobierno de TI (tales como COBIT, ITIL, ISO 27000, Balanced Scorecard) en un proyecto práctico y aplicado, simulando un caso de negocio real de servicios de ciberseguridad.
 
-Si tienes los logos originales del IPN y ESCOM, reemplaza los archivos:
-- `assets/img/ipn-logo.svg` → sube tu imagen como `ipn-logo.png` y ajusta el `layout.js`
-- `assets/img/escom-logo.svg` → igual con `escom-logo.png`
+> **Fecha de elaboración:** Junio, 2027.
