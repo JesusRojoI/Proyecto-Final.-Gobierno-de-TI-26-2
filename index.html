@@ -8,17 +8,13 @@
 </head>
 <body>
 
-  <!-- Header dinámico -->
   <div id="site-header-placeholder"></div>
 
   <div class="layout">
-    <!-- Sidebar dinámico -->
     <div id="sidebar-placeholder"></div>
 
-    <!-- ═══════════════ CONTENIDO PRINCIPAL ═══════════════ -->
     <main class="main-content">
 
-      <!-- Hero -->
       <section class="page-hero">
         <span class="hero-badge">Caso de Negocio · IT Governance</span>
         <h2>Servicio de Seguridad Ofensiva</h2>
@@ -29,29 +25,42 @@
         </p>
       </section>
 
-      <!-- Tarjetas informativas -->
-      <div class="cards-grid">
-        <div class="info-card">
-          <div class="card-icon">🎯</div>
-          <h3>Objetivo del Proyecto</h3>
-          <p>Evaluar integralmente la postura de ciberseguridad de organizaciones cliente mediante la ejecución
-             controlada de análisis de vulnerabilidades, pruebas de penetración y simulaciones de ataques reales.</p>
-        </div>
-        <div class="info-card">
-          <div class="card-icon">📅</div>
-          <h3>Periodo de Desarrollo</h3>
-          <p>Del <strong>4 de febrero</strong> al <strong>12 de junio de 2026</strong>. Clave de proyecto: <strong>06500</strong>.
-             Administradora del servicio: <em>Rocío Palacios Solano</em>.</p>
-        </div>
-        <div class="info-card">
-          <div class="card-icon">👥</div>
-          <h3>Equipo de Trabajo</h3>
-          <p>Estrada Chávez Dilan Daniel · Horteales Morales Antony · Rojo Ibarra Jesús.
-             Grupo 7CV4 — Ing. Sistemas Computacionales.</p>
+      <!-- Valores, Misión y Visión -->
+      <div class="content-section">
+        <p class="section-label">Nuestra Identidad</p>
+        <h2>Misión, Visión y Valores</h2>
+        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-top: 1rem;">
+          <div style="padding: 1rem; background: var(--off-white); border: 1px solid var(--gray-200);">
+            <i class="fas fa-bullseye" style="font-size: 1.75rem; color: var(--guinda); margin-bottom: 0.75rem; display: inline-block;"></i>
+            <h3 style="font-size: 0.9rem; font-weight: 700; margin-bottom: 0.5rem;">Misión</h3>
+            <p style="font-size: 0.83rem; line-height: 1.6; color: var(--gray-800);">Proveer servicios especializados de seguridad ofensiva que permitan a las organizaciones identificar y corregir vulnerabilidades antes de que sean explotadas, fortaleciendo su postura de ciberseguridad mediante metodologías éticas y estándares internacionales.</p>
+          </div>
+          <div style="padding: 1rem; background: var(--off-white); border: 1px solid var(--gray-200);">
+            <i class="fas fa-eye" style="font-size: 1.75rem; color: var(--guinda); margin-bottom: 0.75rem; display: inline-block;"></i>
+            <h3 style="font-size: 0.9rem; font-weight: 700; margin-bottom: 0.5rem;">Visión</h3>
+            <p style="font-size: 0.83rem; line-height: 1.6; color: var(--gray-800);">Ser reconocidos como el equipo líder en seguridad ofensiva para el sector educativo y empresarial de México, referente en la aplicación de frameworks COBIT, ITIL e ISO 27000 para el gobierno de TI.</p>
+          </div>
+          <div style="padding: 1rem; background: var(--off-white); border: 1px solid var(--gray-200);">
+            <i class="fas fa-gem" style="font-size: 1.75rem; color: var(--guinda); margin-bottom: 0.75rem; display: inline-block;"></i>
+            <h3 style="font-size: 0.9rem; font-weight: 700; margin-bottom: 0.5rem;">Valores</h3>
+            <p style="font-size: 0.83rem; line-height: 1.6; color: var(--gray-800);">Ética profesional · Excelencia técnica · Confidencialidad · Mejora continua · Compromiso con el cliente · Integridad académica</p>
+          </div>
         </div>
       </div>
 
-      <!-- Sobre el servicio -->
+      <div class="cards-grid">
+        <div class="info-card">
+          <div class="card-icon"><i class="fas fa-bullseye"></i></div>
+          <h3>Objetivo del Proyecto</h3>
+          <p>Evaluar integralmente la postura de ciberseguridad de organizaciones cliente mediante la ejecución controlada de análisis de vulnerabilidades, pruebas de penetración y simulaciones de ataques reales.</p>
+        </div>
+        <div class="info-card">
+          <div class="card-icon"><i class="fas fa-calendar-alt"></i></div>
+          <h3>Periodo de Desarrollo</h3>
+          <p>Del <strong>4 de febrero</strong> al <strong>12 de junio de 2026</strong>. Clave de proyecto: <strong>06500</strong>. Administradora del servicio: <em>Rocío Palacios Solano</em>.</p>
+        </div>
+      </div>
+
       <div class="content-section">
         <p class="section-label">¿De qué trata?</p>
         <h2>Seguridad Ofensiva como estrategia de negocio</h2>
@@ -69,160 +78,72 @@
           encontrará una entrada — identificamos esas brechas antes de que sean explotadas, transformando
           una debilidad latente en una oportunidad de mejora continua.
         </p>
-        <p>
-          Las evaluaciones se apoyan en metodologías internacionales reconocidas: <strong>OWASP Top 10</strong>,
-          <strong>NIST</strong> y el marco <strong>MITRE ATT&amp;CK</strong>, garantizando un enfoque estructurado que se
-          integra con marcos de Gobierno de TI como COBIT e ISO 27000.
-        </p>
       </div>
 
-      <!-- Servicios del catálogo -->
       <div class="content-section">
         <p class="section-label">Catálogo Base</p>
         <h2>Servicios que componen el proyecto</h2>
         <ul class="styled-list">
           <li>
-            <span class="list-marker marker-info">🛡️</span>
+            <span class="list-marker marker-info"><i class="fas fa-shield-alt"></i></span>
             <div>
               <strong>Evaluación de Vulnerabilidades</strong><br>
-              Análisis automatizado y validación manual de la infraestructura tecnológica expuesta
-              (servidores, redes, bases de datos). Identifica configuraciones deficientes, puertos abiertos
-              y ausencia de actualizaciones de seguridad.
+              Análisis automatizado y validación manual de la infraestructura tecnológica expuesta.
             </div>
           </li>
           <li>
-            <span class="list-marker marker-info">💻</span>
+            <span class="list-marker marker-info"><i class="fas fa-code"></i></span>
             <div>
               <strong>Pruebas de Penetración a Aplicaciones Web</strong><br>
-              Simulaciones de ataques contra aplicaciones web y portales transaccionales usando la metodología
-              OWASP Top 10. Se identifican fallos críticos como inyecciones de código, problemas de autenticación
-              y exposición de datos sensibles.
+              Simulaciones de ataques usando la metodología OWASP Top 10.
             </div>
           </li>
           <li>
-            <span class="list-marker marker-info">🎣</span>
+            <span class="list-marker marker-info"><i class="fas fa-envelope"></i></span>
             <div>
               <strong>Simulación de Ingeniería Social (Phishing)</strong><br>
-              Campañas controladas y autorizadas dirigidas al personal de la organización. Mide el nivel de
-              concientización frente a engaños cibernéticos e identifica vulnerabilidades del factor humano.
+              Campañas controladas para medir el nivel de concientización del personal.
             </div>
           </li>
         </ul>
       </div>
 
-      <!-- Riesgos y beneficios -->
       <div class="cards-grid">
         <div class="content-section" style="margin-bottom:0;">
           <p class="section-label">Riesgos Clave</p>
           <h2>Riesgos identificados</h2>
           <ul class="styled-list">
-            <li><span class="list-marker marker-risk">!</span><div><strong>Interrupción operativa</strong> — escaneos mal calibrados pueden saturar servicios.</div></li>
-            <li><span class="list-marker marker-risk">!</span><div><strong>Ejecución fuera de alcance</strong> — acceso accidental a infraestructura de terceros.</div></li>
-            <li><span class="list-marker marker-risk">!</span><div><strong>Exposición de datos sensibles</strong> — manejo inadecuado de información durante la evaluación.</div></li>
-            <li><span class="list-marker marker-risk">!</span><div><strong>Incapacidad de remediación</strong> — hallazgos sin presupuesto para corregirse.</div></li>
-            <li><span class="list-marker marker-risk">!</span><div><strong>Falsa sensación de seguridad</strong> — un pentest puntual no cubre toda la organización.</div></li>
+            <li><span class="list-marker marker-risk"><i class="fas fa-exclamation"></i></span><div><strong>Interrupción operativa</strong> — escaneos mal calibrados pueden saturar servicios.</div></li>
+            <li><span class="list-marker marker-risk"><i class="fas fa-exclamation"></i></span><div><strong>Ejecución fuera de alcance</strong> — acceso accidental a infraestructura de terceros.</div></li>
+            <li><span class="list-marker marker-risk"><i class="fas fa-exclamation"></i></span><div><strong>Exposición de datos sensibles</strong> — manejo inadecuado de información durante la evaluación.</div></li>
           </ul>
         </div>
         <div class="content-section" style="margin-bottom:0;">
           <p class="section-label">Beneficios Esperados</p>
           <h2>Valor que genera</h2>
           <ul class="styled-list">
-            <li><span class="list-marker marker-ok">✓</span><div><strong>Visibilidad cuantificable del riesgo</strong> — evidencia empírica sobre vulnerabilidades reales.</div></li>
-            <li><span class="list-marker marker-ok">✓</span><div><strong>Optimización del presupuesto de TI</strong> — justificación basada en hechos, no suposiciones.</div></li>
-            <li><span class="list-marker marker-ok">✓</span><div><strong>Cumplimiento normativo</strong> — demuestra diligencia ante reguladores (ISO 27001, PCI-DSS).</div></li>
+            <li><span class="list-marker marker-ok"><i class="fas fa-check"></i></span><div><strong>Visibilidad cuantificable del riesgo</strong> — evidencia empírica sobre vulnerabilidades reales.</div></li>
+            <li><span class="list-marker marker-ok"><i class="fas fa-check"></i></span><div><strong>Optimización del presupuesto de TI</strong> — justificación basada en hechos.</div></li>
+            <li><span class="list-marker marker-ok"><i class="fas fa-check"></i></span><div><strong>Cumplimiento normativo</strong> — demuestra diligencia ante reguladores.</div></li>
           </ul>
         </div>
       </div>
 
-      <!-- Equipo -->
-      <div class="content-section" style="margin-top:1.5rem;">
+      <div class="content-section">
         <p class="section-label">Personal Involucrado</p>
         <h2>Equipo del proyecto</h2>
         <table class="team-table">
           <thead>
-            <tr>
-              <th>Perfil</th>
-              <th>Tipo de contratación</th>
-            </tr>
+            <tr><th>Perfil</th><th>Tipo de contratación</th</tr>
           </thead>
           <tbody>
-            <tr>
-              <td><strong>Líder de Proyecto y Gobierno de Seguridad</strong><br>
-                <span style="font-size:0.78rem;color:#7A6E6E;">Alineación estratégica, definición del alcance (RoE), presentación ejecutiva.</span>
-              </td>
-              <td>Tiempo completo (indefinido)</td>
-            </tr>
-            <tr>
-              <td><strong>Ingeniero de Seguridad Ofensiva (Pentester)</strong><br>
-                <span style="font-size:0.78rem;color:#7A6E6E;">Ejecución técnica, explotación manual, elaboración de PoC.</span>
-              </td>
-              <td>Tiempo completo (indefinido)</td>
-            </tr>
-            <tr>
-              <td><strong>Analista de Vulnerabilidades</strong><br>
-                <span style="font-size:0.78rem;color:#7A6E6E;">Escaneos automatizados, OSINT, apoyo en informe técnico.</span>
-              </td>
-              <td>Honorarios / Por proyecto</td>
-            </tr>
+            <tr><td><strong>Líder de Proyecto y Gobierno de Seguridad</strong></td><td>Tiempo completo (indefinido)</td</tr>
+            <tr><td><strong>Ingeniero de Seguridad Ofensiva (Pentester)</strong></td><td>Tiempo completo (indefinido)</td</tr>
+            <tr><td><strong>Analista de Vulnerabilidades</strong></td><td>Honorarios / Por proyecto</td</tr>
           </tbody>
         </table>
       </div>
-
-      <!-- Cómo usar el sistema -->
-      <div class="content-section">
-        <p class="section-label">Guía de uso</p>
-        <h2>¿Cómo navegar este sistema?</h2>
-        <p>
-          Utiliza la <strong>barra lateral izquierda</strong> para acceder a cada una de las actividades del proyecto.
-          Cada sección corresponde a una fase del cronograma de trabajo y contiene:
-        </p>
-        <ul class="styled-list">
-          <li>
-            <span class="list-marker marker-info">1</span>
-            <div><strong>Descripción de la actividad</strong> — contexto técnico y objetivo de la fase dentro del proyecto de seguridad ofensiva.</div>
-          </li>
-          <li>
-            <span class="list-marker marker-info">2</span>
-            <div><strong>Visualizador de PDF</strong> — el documento correspondiente a la actividad se muestra directamente en la página sin necesidad de descargar.</div>
-          </li>
-          <li>
-            <span class="list-marker marker-info">3</span>
-            <div><strong>Botón de descarga</strong> — permite guardar el PDF de la actividad en tu equipo con un solo clic.</div>
-          </li>
-        </ul>
-        <p style="margin-top:0.85rem;">
-          Los archivos PDF deben colocarse en la carpeta <code style="background:#f0ecec;border:1px solid #d9d0d0;border-radius:4px;padding:0.1rem 0.4rem;font-size:0.82rem;color:#6B1A2A;">pdfs/</code> del proyecto.
-          Consulta la sección <strong>"¿Dónde subir los PDFs?"</strong> más abajo para conocer los nombres exactos de cada archivo.
-        </p>
-      </div>
-
-      <!-- Dónde subir PDFs -->
-      <div class="content-section">
-        <p class="section-label">Archivos requeridos</p>
-        <h2>¿Dónde subir los PDFs?</h2>
-        <p>Coloca los archivos PDF dentro de la carpeta <code style="background:#f0ecec;border:1px solid #d9d0d0;border-radius:4px;padding:0.1rem 0.4rem;font-size:0.82rem;color:#6B1A2A;">pdfs/</code> con los nombres exactos indicados a continuación:</p>
-        <table class="team-table" style="margin-top:0.75rem;">
-          <thead>
-            <tr><th>Actividad</th><th>Nombre del archivo esperado</th></tr>
-          </thead>
-          <tbody>
-            <tr><td>Planeación y Alcance (RoE)</td><td><code>planeacion.pdf</code></td></tr>
-            <tr><td>Reconocimiento (OSINT)</td><td><code>reconocimiento.pdf</code></td></tr>
-            <tr><td>Evaluación de Vulnerabilidades</td><td><code>vulnerabilidades.pdf</code></td></tr>
-            <tr><td>Pentesting Web e Infraestructura</td><td><code>pentesting.pdf</code></td></tr>
-            <tr><td>Ingeniería Social (Phishing)</td><td><code>ingenieria-social.pdf</code></td></tr>
-            <tr><td>Análisis de Resultados</td><td><code>analisis.pdf</code></td></tr>
-            <tr><td>Reporte y Cierre</td><td><code>reporte.pdf</code></td></tr>
-          </tbody>
-        </table>
-        <p style="margin-top:1rem;font-size:0.83rem;color:#7A6E6E;">
-          ⚠️ Si el archivo aún no está subido, la página mostrará un mensaje indicando que el documento está pendiente.
-          El visualizador y el botón de descarga se activarán automáticamente cuando el PDF esté disponible en la ruta correcta.
-        </p>
-      </div>
-
     </main>
-    <!-- ═══════════════ FIN CONTENIDO ═══════════════ -->
   </div>
 
   <script src="assets/js/layout.js"></script>
