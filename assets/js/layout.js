@@ -59,7 +59,7 @@ function renderLayout(basePath = '') {
                             <i class="fas fa-briefcase nav-icon"></i>
                             <span>Caso de Negocio</span>
                         </a></li>
-                        <li><a href="${path}cedula-servicio.html" class="${currentPath === 'cedula-servicio.html' ? 'active' : ''}">
+                        <li><a href="${path}pages/cedula-servicio.html" class="${currentPath === 'cedula-servicio.html' ? 'active' : ''}">
                             <i class="fas fa-file-alt nav-icon"></i>
                             <span>Cédula de Servicio (ITIL)</span>
                         </a></li>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Inventario de Activos — IT Governance | IPN ESCOM</title>
+  <link rel="stylesheet" href="../assets/css/style.css" />
+</head>
+<body>
+
+  <div id="site-header-placeholder"></div>
+
+  <div class="layout">
+    <div id="sidebar-placeholder"></div>
+
+    <main class="main-content">
+
+      <!-- Breadcrumb -->
+      <nav class="breadcrumb">
+        <a href="../index.html">Inicio</a>
+        <span>›</span>
+        <span>Actividades</span>
+        <span>›</span>
+        <span>Inventario de Activos</span>
+      </nav>
+
+      <!-- Cabecera de actividad -->
+      <div class="activity-header">
+        <h2><i class="fas fa-database"></i> Inventario de Activos</h2>
+      </div>
+
+      <!-- Descripción -->
+      <div class="activity-desc">
+        <h3>Descripción de la Actividad</h3>
+        <p>El inventario de activos documenta los recursos de información del Servicio de Seguridad Ofensiva, incluyendo la relación de procesos críticos (planeación, ejecución de pruebas y reporte), actividades críticas, factores de éxito, así como los activos de infraestructura asociados a cada proceso con su clasificación y responsables.</p>
+      </div>
+
+      <!-- Visor PDF -->
+      <div class="pdf-viewer-wrap">
+        <h3><i class="fas fa-file-pdf"></i> Documento</h3>
+        <div class="pdf-container">
+          <iframe
+            id="pdf-frame"
+            src="../pdfs/inventario-de-activos.pdf"
+            title="Documento PDF: Inventario de Activos">
+          </iframe>
+          <div class="pdf-placeholder" id="pdf-placeholder" style="display:none;">
+            <span class="pdf-icon"><i class="fas fa-file-pdf"></i></span>
+            <p>El documento aún no está disponible.<br>
+               Sube el archivo <code>inventario-de-activos.pdf</code> a la carpeta <code>pdfs/</code> del proyecto.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Descarga -->
+      <a class="btn-download" href="../pdfs/inventario-de-activos.pdf" download>
+        <i class="fas fa-download"></i> Descargar PDF
+      </a>
+
+    </main>
+  </div>
+
+  <script src="../assets/js/layout.js"></script>
+  <script>
+    renderLayout('../');
+
+    // Detecta si el PDF está disponible
+    (function() {
+      var frame = document.getElementById('pdf-frame');
+      var ph    = document.getElementById('pdf-placeholder');
+      if (!frame) return;
+      frame.addEventListener('load', function() {
+        try {
+          if (frame.contentDocument && frame.contentDocument.title === '404') {
+            frame.style.display = 'none';
+            if (ph) ph.style.display = 'flex';
+          }
+        } catch(e) {
+          // cross-origin: el PDF sí cargó correctamente
+        }
+      });
+    })();
+  </script>
+</body>
+</html>
