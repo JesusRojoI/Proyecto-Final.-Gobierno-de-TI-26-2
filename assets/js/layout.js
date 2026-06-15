@@ -75,7 +75,7 @@ function renderLayout(basePath = '') {
                             <i class="fas fa-chart-bar nav-icon"></i>
                             <span>BIA Táctico (3 procesos)</span>
                         </a></li>
-                        <li><a href="${path}bia-operacional.html" class="${currentPath === 'bia-operacional.html' ? 'active' : ''}">
+                        <li><a href="${path}pages/bia-operacional.html" class="${currentPath === 'bia-operacional.html' ? 'active' : ''}">
                             <i class="fas fa-chart-pie nav-icon"></i>
                             <span>BIA Operacional</span>
                         </a></li>

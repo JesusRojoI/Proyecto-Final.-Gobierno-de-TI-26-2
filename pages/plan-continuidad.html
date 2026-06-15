@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-  <title>Matriz de Riesgos — IT Governance | IPN ESCOM</title>
+  <title>Plan de Continuidad — IT Governance | IPN ESCOM</title>
   <link rel="stylesheet" href="../assets/css/style.css" />
 </head>
 <body>
@@ -21,18 +21,18 @@
         <span>›</span>
         <span>Actividades</span>
         <span>›</span>
-        <span>Matriz de Riesgos</span>
+        <span>Plan de Continuidad</span>
       </nav>
 
       <!-- Cabecera de actividad -->
       <div class="activity-header">
-        <h2><i class="fas fa-exclamation-triangle"></i> Matriz de Riesgos</h2>
+        <h2><i class="fas fa-redo-alt"></i> Plan de Continuidad</h2>
       </div>
 
       <!-- Descripción -->
       <div class="activity-desc">
         <h3>Descripción de la Actividad</h3>
-        <p>La matriz de riesgos identifica y evalúa los activos de información del Servicio de Seguridad Ofensiva, valorando su confidencialidad, integridad y disponibilidad (CID). Analiza vulnerabilidades, amenazas, eventos de riesgo, controles existentes, así como el impacto y la criticidad de las infraestructuras críticas para establecer controles adecuados.</p>
+        <p>El Plan de Continuidad del Negocio garantiza la operación del Servicio de Seguridad Ofensiva ante eventos disruptivos que puedan afectar la disponibilidad, integridad o confidencialidad de los activos de información. Se apoya en el análisis de impacto al negocio (BIA), la matriz de riesgos y el inventario de activos, estableciendo estrategias de respuesta, recuperación y continuidad para minimizar interrupciones y asegurar la prestación del servicio a los clientes.</p>
       </div>
 
       <!-- Visor PDF -->
@@ -41,19 +41,19 @@
         <div class="pdf-container">
           <iframe
             id="pdf-frame"
-            src="../pdfs/matriz-de-riesgos.pdf"
-            title="Documento PDF: Matriz de Riesgos">
+            src="../pdfs/plan-de-continuidad.pdf"
+            title="Documento PDF: Plan de Continuidad">
           </iframe>
           <div class="pdf-placeholder" id="pdf-placeholder" style="display:none;">
             <span class="pdf-icon"><i class="fas fa-file-pdf"></i></span>
             <p>El documento aún no está disponible.<br>
-               Sube el archivo <code>matriz-de-riesgos.pdf</code> a la carpeta <code>pdfs/</code> del proyecto.</p>
+               Sube el archivo <code>plan-de-continuidad.pdf</code> a la carpeta <code>pdfs/</code> del proyecto.</p>
           </div>
         </div>
       </div>
 
       <!-- Descarga -->
-      <a class="btn-download" href="../pdfs/matriz-de-riesgos.pdf" download>
+      <a class="btn-download" href="../pdfs/plan-de-continuidad.pdf" download>
         <i class="fas fa-download"></i> Descargar PDF
       </a>
 
@@ -64,7 +64,7 @@
   <script>
     renderLayout('../');
 
-    // Detecta si el PDF está disponible a a a
+    // Detecta si el PDF está disponible
     (function() {
       var frame = document.getElementById('pdf-frame');
       var ph    = document.getElementById('pdf-placeholder');
